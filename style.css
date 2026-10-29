@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #101914;
+  color: #f4fff6;
+  font-family: system-ui, sans-serif;
+  margin: 0;
+}
+
+.experience {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 1rem;
+}
+
+.scene {
+  max-width: 42rem;
+}
+
+.target {
+  border: 1px solid currentColor;
+  margin-top: 2rem;
+  padding: 2rem;
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+.target.is-active {
+  opacity: 0.75;
+  transform: translateY(-1rem) rotate(-2deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    scroll-behavior: auto !important;
+    transition-duration: 1ms !important;
+  }
+}
