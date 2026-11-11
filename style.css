@@ -10,7 +10,7 @@ html::-webkit-scrollbar {
 }
 
 body {
-  background: #22bfeb;
+  background: #0CA2EF;
   color: #f4fff6;
   font-family: system-ui, sans-serif;
   margin: 0;
@@ -31,7 +31,7 @@ body {
 }
 
 /* put all non-circle assets (e.g. text) on top */
-.scene > :not(.depth):not(.entities) {
+.scene > :not(.depth):not(.entities):not(.surface) {
   position: relative;
   z-index: 1;
 }
@@ -51,6 +51,21 @@ body {
   height: 100vmax;
   max-width: none;
   will-change: transform, opacity;
+}
+
+.surface {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.surface-tiles {
+  position: absolute;
+  background-image: url("assets/img/ocean_texture.png");
+  background-repeat: repeat;
+  will-change: transform;
 }
 
 .entities {

@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const readout = document.querySelector("[data-target]");
   const layerHost = document.querySelector("[data-depth-layers]");
   const entityHost = document.querySelector("[data-entities]");
+  const surface = document.querySelector("[data-surface]");
+  const tiles = document.querySelector("[data-surface-tiles]");
 
   const MAX_DEPTH = 10935; // Furthest scroll level, reflecting the Challenger Deep's level
   const SCROLL_SPEED = 10;  // One screen of scrolling = 5m
@@ -68,6 +70,48 @@ document.addEventListener("DOMContentLoaded", () => {
 
   gsap.set(layers, { scale: 0 });
 
+  // Surface settings
+  const SURFACE = {
+    tileSize: 256,
+    direction: { x: -1, y: -1 },
+    secondsPerTile: 12,
+    fadeOutDepth: 10
+  };
+
+  const T = SURFACE.tileSize;
+  gsap.set(tiles, {
+    top: -T,
+    left: -T,
+    width: `calc(100% + ${T * 2}px)`,
+    height: `calc(100% + ${T * 2}px)`,
+    backgroundSize: `${T}px ${T}px`
+  });
+
+  // Endless slide one tile, then jump back
+  gsap.fromTo(
+    tiles,
+    { x: 0, y: 0 },
+    {
+      x: SURFACE.direction.x * T,
+      y: SURFACE.direction.y * T,
+      duration: SURFACE.secondsPerTile,
+      ease: "none",
+      repeat: -1
+    }
+  );
+
+  // Adjust surface based on depth
+  tl.to(
+    surface,
+    {
+      scale: 1.6,
+      autoAlpha: 0,
+      duration: SURFACE.fadeOutDepth,
+      ease: "power1.in"
+    },
+    0
+  );
+
   const entityEls = entities.map((e) => {
     const img = document.createElement("img");
     img.className = "entity";
@@ -76,6 +120,21 @@ document.addEventListener("DOMContentLoaded", () => {
     img.style.width = `${e.width ?? 30}vmin`;
     entityHost.appendChild(img);
     return img;
+  });
+
+
+  entities.forEach((e, i) => {
+    if (e.wobble === false) return;
+    
+    gsap.to(entityEls[i], {
+      rotation: gsap.utils.random(-10, 10),
+      skewX: gsap.utils.random(-15, 15),
+      duration: gsap.utils.random(2, 4),
+      ease: "sine.inOut",
+      yoyo: true,
+      repeat: -1,
+      delay: i * 0.3
+    });
   });
 
   gsap.set(entityEls, { xPercent: -50, yPercent: -50, autoAlpha: 0 });
@@ -116,7 +175,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Fade in/out
     tl.to(el, { autoAlpha: 1, duration: fade, ease: "none" }, start);
-    tl.to(el, { autoAlpha: 0, duration: fade, ease: "none" }, start + e.span - fade);
+
+    // Add fadeout if hold isn't toggled
+    if (!e.hold)
+    {
+      tl.to(el, { autoAlpha: 0, duration: fade, ease: "none" }, start + e.span - fade);
+    }
   });
 
   tl.set({}, {}, MAX_DEPTH);

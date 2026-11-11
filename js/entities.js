@@ -14,14 +14,38 @@
 // width: entity's size at scale: 1
 // endScale: scale multiplier
 const ENTITIES = [
-{
-    src: "../assets/img/entities/killer_whale.png",
-    depth: 120,
-    span: 60,
-    x: 0,
-    y: -50,
-    offset: 0.1,
-    width: 40,
-    endScale: 2
-},
+    {
+        src: "../assets/img/entities/killer_whale.png",
+        depth: 120,
+        span: 60,
+        x: 0,
+        y: -50,
+        offset: 0.1,
+        width: 40,
+        endScale: 2,
+        wobble: true
+    },
+    {
+        src: "../assets/img/entities/midnight_zone_circle.png",
+        depth: 990,
+        span: 100,
+        x: 0,
+        y: 0,
+        offset: 0,
+        width: 360,
+        endScale: 6,
+        wobble: false
+    },
+    {
+        src: "../assets/img/entities/ocean_floor.png",
+        depth: 11035,
+        span: 100,
+        x: 0,
+        y: 0,
+        offset: 0,
+        width: 240,
+        endScale: 2,
+        wobble: false,
+        hold: true
+    }
 ];
