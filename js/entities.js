@@ -15,7 +15,7 @@
 // endScale: scale multiplier
 const ENTITIES = [
     {
-        src: "../assets/img/entities/midnight_zone_circle.png",
+        src: "./assets/img/entities/midnight_zone_circle.png",
         depth: 990,
         span: 100,
         fade: 20,
@@ -27,7 +27,7 @@ const ENTITIES = [
         wobble: false
     },
     {
-        src: "../assets/img/entities/ocean_floor.png",
+        src: "./assets/img/entities/ocean_floor.png",
         depth: 10760,
         span: 350,
         fade: 20,
@@ -41,7 +41,7 @@ const ENTITIES = [
     },
     {
         name: "ATLANTIC SALMON",
-        src: "../assets/img/entities/atlantic_salmon.png",
+        src: "./assets/img/entities/atlantic_salmon.png",
         depth: 5,
         span: 25,
         fade: 5,
@@ -54,7 +54,7 @@ const ENTITIES = [
     },
     {
         name: "MANATEE",
-        src: "../assets/img/entities/manatee.png",
+        src: "./assets/img/entities/manatee.png",
         depth: 6,
         span: 25,
         fade: 5,
@@ -67,7 +67,7 @@ const ENTITIES = [
     },
     {
         name: "STRIPED BASS",
-        src: "../assets/img/entities/striped_bass.png",
+        src: "./assets/img/entities/striped_bass.png",
         depth: 12,
         span: 30,
         fade: 5,
@@ -80,7 +80,7 @@ const ENTITIES = [
     },
     {
         name: "STAGHORN CORAL",
-        src: "../assets/img/entities/staghorn_coral.png",
+        src: "./assets/img/entities/staghorn_coral.png",
         depth: 14,
         span: 32,
         fade: 5,
@@ -93,7 +93,7 @@ const ENTITIES = [
     },
     {
         name: "EUROPEAN PILCHARD",
-        src: "../assets/img/entities/european_pilchard.png",
+        src: "./assets/img/entities/european_pilchard.png",
         depth: 24,
         span: 24,
         fade: 10,
@@ -106,7 +106,7 @@ const ENTITIES = [
     },
     {
         name: "POLAR BEAR",
-        src: "../assets/img/entities/polar_bear.png",
+        src: "./assets/img/entities/polar_bear.png",
         depth: 28,
         span: 40,
         fade: 10,
@@ -119,7 +119,7 @@ const ENTITIES = [
     },
     {
         name: "CLOWN FISH",
-        src: "../assets/img/entities/clown_fish.png",
+        src: "./assets/img/entities/clown_fish.png",
         depth: 36,
         span: 40,
         fade: 10,
@@ -132,7 +132,7 @@ const ENTITIES = [
     },
     {
         name: "SPOTTED BASS",
-        src: "../assets/img/entities/spotted_bass.png",
+        src: "./assets/img/entities/spotted_bass.png",
         depth: 30,
         span: 80,
         fade: 30,
@@ -145,7 +145,7 @@ const ENTITIES = [
     },
     {
         name: "KILLER WHALE",
-        src: "../assets/img/entities/killer_whale.png",
+        src: "./assets/img/entities/killer_whale.png",
         depth: 80,
         span: 80,
         fade: 10,
@@ -158,7 +158,7 @@ const ENTITIES = [
     },
     {
         name: "BULL SHARK",
-        src: "../assets/img/entities/bull_shark.png",
+        src: "./assets/img/entities/bull_shark.png",
         depth: 155,
         span: 80,
         fade: 30,
@@ -171,7 +171,7 @@ const ENTITIES = [
     },
     {
         name: "DENTEX",
-        src: "../assets/img/entities/dentex.png",
+        src: "./assets/img/entities/dentex.png",
         depth: 185,
         span: 80,
         fade: 15,
@@ -184,7 +184,7 @@ const ENTITIES = [
     },
     {
         name: "THICK-BILLED MURRE DIVE",
-        src: "../assets/img/entities/thick_billed_murre.png",
+        src: "./assets/img/entities/thick_billed_murre.png",
         depth: 212,
         span: 80,
         fade: 15,
@@ -197,7 +197,7 @@ const ENTITIES = [
     },
     {
         name: "CHAIN CATSHARK",
-        src: "../assets/img/entities/chain_catshark.png",
+        src: "./assets/img/entities/chain_catshark.png",
         depth: 230,
         span: 80,
         fade: 15,
@@ -210,7 +210,7 @@ const ENTITIES = [
     },
     {
         name: "GREAT WHITE SHARK",
-        src: "../assets/img/entities/great_white_shark.png",
+        src: "./assets/img/entities/great_white_shark.png",
         depth: 270,
         span: 80,
         fade: 15,
@@ -223,7 +223,7 @@ const ENTITIES = [
     },
     {
         name: "HUMAN",
-        src: "../assets/img/entities/diver.png",
+        src: "./assets/img/entities/diver.png",
         depth: 330,
         span: 100,
         fade: 30,
@@ -236,7 +236,7 @@ const ENTITIES = [
     },
     {
         name: "FIREFLY SQUID",
-        src: "../assets/img/entities/firefly_squid.png",
+        src: "./assets/img/entities/firefly_squid.png",
         depth: 380,
         span: 100,
         fade: 30,
@@ -249,7 +249,7 @@ const ENTITIES = [
     },
     {
         name: "SEA ANGEL",
-        src: "../assets/img/entities/sea_angel.png",
+        src: "./assets/img/entities/sea_angel.png",
         depth: 460,
         span: 100,
         fade: 30,
@@ -262,7 +262,7 @@ const ENTITIES = [
     },
     {
         name: "SWORDFISH",
-        src: "../assets/img/entities/swordfish.png",
+        src: "./assets/img/entities/swordfish.png",
         depth: 460,
         span: 100,
         fade: 30,
@@ -275,7 +275,7 @@ const ENTITIES = [
     },
     {
         name: "JAPANESE SPIDER CRAB",
-        src: "../assets/img/entities/japanese_spider_crab.png",
+        src: "./assets/img/entities/japanese_spider_crab.png",
         depth: 645,
         span: 100,
         fade: 30,
@@ -288,7 +288,7 @@ const ENTITIES = [
     },
     {
         name: "GIANT PACIFIC OCTOPUS",
-        src: "../assets/img/entities/giant_pacific_octopus.png",
+        src: "./assets/img/entities/giant_pacific_octopus.png",
         depth: 765,
         span: 100,
         fade: 15,
@@ -301,7 +301,7 @@ const ENTITIES = [
     },
     {
         name: "GIANT OARFISH",
-        src: "../assets/img/entities/giant_oarfish.png",
+        src: "./assets/img/entities/giant_oarfish.png",
         depth: 800,
         span: 100,
         fade: 15,
@@ -314,7 +314,7 @@ const ENTITIES = [
     },
     {
         name: "SPERM WHALE DIVE",
-        src: "../assets/img/entities/sperm_whale.png",
+        src: "./assets/img/entities/sperm_whale.png",
         depth: 920,
         span: 100,
         fade:20,
@@ -327,7 +327,7 @@ const ENTITIES = [
     },
     {
         name: "ANGLERFISH",
-        src: "../assets/img/entities/angler_fish.png",
+        src: "./assets/img/entities/angler_fish.png",
         depth: 1050,
         span: 200,
         fade: 30,
@@ -340,7 +340,7 @@ const ENTITIES = [
     },
     {
         name: "BLOBFISH",
-        src: "../assets/img/entities/blobfish.png",
+        src: "./assets/img/entities/blobfish.png",
         depth: 1160,
         span: 200,
         fade: 30,
@@ -353,7 +353,7 @@ const ENTITIES = [
     },
     {
         name: "GOBLIN SHARK",
-        src: "../assets/img/entities/gigantactis.png",
+        src: "./assets/img/entities/gigantactis.png",
         depth: 1292,
         span: 200,
         fade: 30,
@@ -366,7 +366,7 @@ const ENTITIES = [
     },
     {
         name: "DRAGONFISH",
-        src: "../assets/img/entities/dragonfish.png",
+        src: "./assets/img/entities/dragonfish.png",
         depth: 1448,
         span: 200,
         fade: 30,
@@ -379,7 +379,7 @@ const ENTITIES = [
     },
     {
         name: "BIG RED JELLYFISH",
-        src: "../assets/img/entities/big_red_jellyfish.png",
+        src: "./assets/img/entities/big_red_jellyfish.png",
         depth: 1490,
         span: 200,
         fade: 30,
@@ -392,7 +392,7 @@ const ENTITIES = [
     },
     {
         name: "GIANT TUBE WORM",
-        src: "../assets/img/entities/giant_tube_worm.png",
+        src: "./assets/img/entities/giant_tube_worm.png",
         depth: 1555,
         span: 200,
         fade: 30,
@@ -405,7 +405,7 @@ const ENTITIES = [
     },
     {
         name: "DEEPEST DIVE OF A NARWHAL",
-        src: "../assets/img/entities/narwhal.png",
+        src: "./assets/img/entities/narwhal.png",
         depth: 1800,
         span: 200,
         fade: 30,
@@ -418,7 +418,7 @@ const ENTITIES = [
     },
     {
         name: "GIANT ISOPOD",
-        src: "../assets/img/entities/giant_isopod.png",
+        src: "./assets/img/entities/giant_isopod.png",
         depth: 2100,
         span: 200,
         fade: 30,
@@ -431,7 +431,7 @@ const ENTITIES = [
     },
     {
         name: "COLOSSAL SQUID",
-        src: "../assets/img/entities/colossal_squid.png",
+        src: "./assets/img/entities/colossal_squid.png",
         depth: 2200,
         span: 200,
         fade: 20,
@@ -444,7 +444,7 @@ const ENTITIES = [
     },
     {
         name: "ELEPHANT SEAL DIVE",
-        src: "../assets/img/entities/elephant_seal.png",
+        src: "./assets/img/entities/elephant_seal.png",
         depth: 2390,
         span: 200,
         fade: 30,
@@ -457,7 +457,7 @@ const ENTITIES = [
     },
     {
         name: "GIGANTACTIS",
-        src: "../assets/img/entities/gigantactis.png",
+        src: "./assets/img/entities/gigantactis.png",
         depth: 2500,
         span: 200,
         fade: 30,
@@ -470,7 +470,7 @@ const ENTITIES = [
     },
     {
         name: "SQUIDWORM",
-        src: "../assets/img/entities/squidworm.png",
+        src: "./assets/img/entities/squidworm.png",
         depth: 2650,
         span: 200,
         fade: 30,
@@ -483,7 +483,7 @@ const ENTITIES = [
     },
     {
         name: "VAMPIRE SQUID",
-        src: "../assets/img/entities/vampire_squid.png",
+        src: "./assets/img/entities/vampire_squid.png",
         depth: 2905,
         span: 200,
         fade: 30,
@@ -496,7 +496,7 @@ const ENTITIES = [
     },
     {
         name: "VIPERFISH",
-        src: "../assets/img/entities/viperfish.png",
+        src: "./assets/img/entities/viperfish.png",
         depth: 2803,
         span: 200,
         fade: 30,
@@ -509,7 +509,7 @@ const ENTITIES = [
     },
     {
         name: "GULPER EEL",
-        src: "../assets/img/entities/gulper_eel.png",
+        src: "./assets/img/entities/gulper_eel.png",
         depth: 3062,
         span: 200,
         fade: 30,
@@ -522,7 +522,7 @@ const ENTITIES = [
     },
     {
         name: "COSMIC JELLYFISH",
-        src: "../assets/img/entities/cosmic_jellyfish.png",
+        src: "./assets/img/entities/cosmic_jellyfish.png",
         depth: 3100,
         span: 200,
         fade: 30,
@@ -535,7 +535,7 @@ const ENTITIES = [
     },
     {
         name: "HARP SPONGE",
-        src: "../assets/img/entities/harp_sponge.png",
+        src: "./assets/img/entities/harp_sponge.png",
         depth: 3320,
         span: 200,
         fade: 30,
@@ -548,7 +548,7 @@ const ENTITIES = [
     },
     {
         name: "TITANIC WRECKAGE",
-        src: "../assets/img/entities/titanic.png",
+        src: "./assets/img/entities/titanic.png",
         depth: 3810,
         span: 200,
         fade: 30,
@@ -561,7 +561,7 @@ const ENTITIES = [
     },
     {
         name: "DUMBO OCTOPUS",
-        src: "../assets/img/entities/dumbo_octopus.png",
+        src: "./assets/img/entities/dumbo_octopus.png",
         depth: 3955,
         span: 200,
         fade: 30,
@@ -574,7 +574,7 @@ const ENTITIES = [
     },
     {
         name: "SEA PIG",
-        src: "../assets/img/entities/sea_pig.png",
+        src: "./assets/img/entities/sea_pig.png",
         depth: 4500,
         span: 200,
         fade: 30,
@@ -587,7 +587,7 @@ const ENTITIES = [
     },
     {
         name: "MEGAMOUTH SHARK",
-        src: "../assets/img/entities/megamouth_shark.png",
+        src: "./assets/img/entities/megamouth_shark.png",
         depth: 4600,
         span: 200,
         fade: 30,
@@ -600,7 +600,7 @@ const ENTITIES = [
     },
     {
         name: "FACELESS FISH",
-        src: "../assets/img/entities/fangtooth.png",
+        src: "./assets/img/entities/fangtooth.png",
         depth: 4700,
         span: 200,
         fade: 30,
@@ -613,7 +613,7 @@ const ENTITIES = [
     },
     {
         name: "TRIPOD FISH",
-        src: "../assets/img/entities/tripod_fish.png",
+        src: "./assets/img/entities/tripod_fish.png",
         depth: 4800,
         span: 200,
         fade: 30,
@@ -626,7 +626,7 @@ const ENTITIES = [
     },
     {
         name: "FACELESS FISH",
-        src: "../assets/img/entities/faceless_fish.png",
+        src: "./assets/img/entities/faceless_fish.png",
         depth: 5100,
         span: 200,
         fade: 30,
@@ -639,7 +639,7 @@ const ENTITIES = [
     },
     {
         name: "USS JOHNSTON SHIPWRECK",
-        src: "../assets/img/entities/uss_johnston.png",
+        src: "./assets/img/entities/uss_johnston.png",
         depth: 6220,
         span: 200,
         fade: 30,
@@ -652,7 +652,7 @@ const ENTITIES = [
     },
     {
         name: "GRENADIER",
-        src: "../assets/img/entities/angler_fish.png",
+        src: "./assets/img/entities/angler_fish.png",
         depth: 6800,
         span: 200,
         fade: 30,
@@ -665,7 +665,7 @@ const ENTITIES = [
     },
     {
         name: "COOKIECUTTER SHARK",
-        src: "../assets/img/entities/cookie_cutter_shark.png",
+        src: "./assets/img/entities/cookie_cutter_shark.png",
         depth: 7200,
         span: 200,
         fade: 30,
@@ -678,7 +678,7 @@ const ENTITIES = [
     },
     {
         name: "ATOLLA JELLYFISH",
-        src: "../assets/img/entities/atolla_jellyfish.png",
+        src: "./assets/img/entities/atolla_jellyfish.png",
         depth: 4050,
         span: 200,
         fade: 30,
@@ -691,7 +691,7 @@ const ENTITIES = [
     },
     {
         name: "ABYSSAL SPIDERFISH",
-        src: "../assets/img/entities/abyssal_spiderfish.png",
+        src: "./assets/img/entities/abyssal_spiderfish.png",
         depth: 5600,
         span: 200,
         fade: 30,
@@ -704,7 +704,7 @@ const ENTITIES = [
     },
     {
         name: "CHITON",
-        src: "../assets/img/entities/chiton.png",
+        src: "./assets/img/entities/chiton.png",
         depth: 6900,
         span: 200,
         fade: 30,
@@ -717,7 +717,7 @@ const ENTITIES = [
     },
     {
         name: "COMB JELLY",
-        src: "../assets/img/entities/comb_jelly.png",
+        src: "./assets/img/entities/comb_jelly.png",
         depth: 7200,
         span: 200,
         fade: 30,
@@ -730,7 +730,7 @@ const ENTITIES = [
     },
     {
         name: "HADAL SNAILFISH",
-        src: "../assets/img/entities/hadal_snailfish.png",
+        src: "./assets/img/entities/hadal_snailfish.png",
         depth: 8180,
         span: 200,
         fade: 30,
@@ -743,7 +743,7 @@ const ENTITIES = [
     },
     {
         name: "CUSK EEL",
-        src: "../assets/img/entities/cusk_eel.png",
+        src: "./assets/img/entities/cusk_eel.png",
         depth: 8370,
         span: 200,
         fade: 30,
@@ -756,7 +756,7 @@ const ENTITIES = [
     },
     {
         name: "HADAL AMPHIPOD",
-        src: "../assets/img/entities/hadal_amphipod.png",
+        src: "./assets/img/entities/hadal_amphipod.png",
         depth: 10320,
         span: 150,
         fade: 30,
