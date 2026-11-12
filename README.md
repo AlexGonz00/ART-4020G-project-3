@@ -13,3 +13,12 @@ As mentioned, the handling of the assets on this website was made using GSAP, al
 On top of that, I also added data-driven elements, including:
 + Entities, that hold info on each creature/object's depth, span, drift, size, etc.
     * The full list can be found in `entities.js`
++ A pressure calculator, with the math pulled from __[Blue Robotics Inc](https://bluerobotics.com/learn/pressure-depth-calculator/)__, specifically:
+
+```
+P = pgh
+
+pₛₐₗₜ = 1023.6 kg/m³
+g = 9.80665 m/s²
+h = <current num meters>
+```

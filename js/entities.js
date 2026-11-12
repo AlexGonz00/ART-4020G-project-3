@@ -17,8 +17,8 @@ const ENTITIES = [
     {
         src: "../assets/img/entities/killer_whale.png",
         depth: 120,
-        span: 60,
-        x: 0,
+        span: 200,
+        x: 30,
         y: -50,
         offset: 0.1,
         width: 40,
@@ -39,13 +39,13 @@ const ENTITIES = [
     {
         src: "../assets/img/entities/ocean_floor.png",
         depth: 10935,
-        span: 350,
+        span: 400,
         x: 0,
         y: 0,
         offset: 0,
         width: 1080,
         endScale: 0.4,
-        wobble: false,
+        wobble: true,
         hold: true
     }
 ];

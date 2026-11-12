@@ -6,19 +6,42 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Deep Sea Exploration</title>
         <link rel="stylesheet" href="style.css">
+
+        <!-- Geo font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Geo:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+        <!-- Oswald font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Geo:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     </head>
     <body>
         <main class="experience">
             <section class="scene" aria-labelledby="scene-title">
+                <div class="measurement-container">
+                    <div class="depth-box">
+                        <div class="target" data-target>
+                        <p>0m</p>
+                    </div>
+                    </div>
+                    <div class="pressure-box">
+                        <p>0 bar</p>
+                    </div>
+                    <div class="zone-box">
+                        <p class="caption" data-caption aria-live="polite">Surface</p>
+                    </div>
+                </div>
                 <div class="depth" aria-hidden="true" data-depth-layers></div>
                 <div class="surface" aria-hidden="true" data-surface>
                     <div class="surface-tiles" data-surface-tiles></div>
                 </div>
                 <div class="entities" aria-hidden="true" data-entities></div>
-                <p class="eyebrow">Interactive Web Experience</p>
-                <h1 id="scene-title">&lt;Insert Ocean Stuff Here&gt;</h1>
-                <p class="caption" data-caption aria-live="polite">Scroll time</p>
-                <div class="target" data-target>0m</div>
+                <div class="title-box">
+                    <h1 id="scene-title">DEEP SEA EXPLORATION</h1>
+                    <h2 class="eyebrow">By Alex Gonzales</h2>
+                </div>
             </section>
         </main>
 

@@ -2,12 +2,18 @@
 document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
   
+  // Various tweens
   const caption = document.querySelector("[data-caption]");
   const readout = document.querySelector("[data-target]");
   const layerHost = document.querySelector("[data-depth-layers]");
   const entityHost = document.querySelector("[data-entities]");
   const surface = document.querySelector("[data-surface]");
   const tiles = document.querySelector("[data-surface-tiles]");
+  const title = document.querySelector(".title-box");
+  const gauge = document.querySelector(".measurement-container");
+  
+  // Initially set gauge transparent
+  gsap.set(gauge, { autoAlpha: 0, y: -20} );
 
   const MAX_DEPTH = 10935; // Furthest scroll level, reflecting the Challenger Deep's level
   const SCROLL_SPEED = 10;  // One screen of scrolling = 5m
@@ -20,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
   
   // Gradient images for depth indications
   const zones = [
-    { name: "Surface", max: 5 },
     { name: "Epipelagic Zone", max: 200 },
     { name: "Mesopelagic Zone", max: 1000 },
     { name: "Bathypelagic Zone", max: 4000 },
@@ -34,6 +39,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Layer stuff
   const NUM_LAYERS = 10;
   const END_SCALE = 4;  // how far each layer expands
+
+  // Meters before title<->gauge switch
+  const INTRO_FADE = 10;
   
   // Build layers
   const layers = Array.from({ length: NUM_LAYERS }, (_, i) => {
@@ -67,6 +75,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   });
+
+  tl.to(title, { autoAlpha: 0, y: -30, duration: INTRO_FADE, ease: "power1.in" }, 0);
+  tl.to(gauge, { autoAlpha: 1, y: 0, duration: INTRO_FADE, ease: "power1.out"}, 0);
 
   gsap.set(layers, { scale: 0 });
 
