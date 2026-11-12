@@ -196,8 +196,8 @@ document.addEventListener("DOMContentLoaded", () => {
   
   entities.forEach((e, i) => {
     const el = entityEls[i];
-    const start = e.depth - e.span / 2;
-    const fade = e.span * 0.3;
+    const start = Math.max(0, e.start ?? (e.depth - e.span / 2));
+    const fade = e.fade ?? e.span * 0.3;
     const off = e.offset ?? 0.5;
 
     // Grow/drift out
