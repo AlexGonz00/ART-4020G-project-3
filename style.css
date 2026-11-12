@@ -144,6 +144,24 @@ body {
   will-change: transform, opacity;
 }
 
+.entity img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.entity-label {
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  padding-bottom: 0.5rem;
+  white-space: nowrap;
+  color: #fff;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
 .target {
   padding: 2rem;
   color: white;
@@ -153,6 +171,17 @@ body {
 .target.is-active {
   opacity: 0.75;
   transform: translateY(-1rem) rotate(-2deg);
+}
+
+.title-box,
+.end-box {
+  grid-area: 1 / 1;
+  align-self: center;
+}
+
+.end-box {
+  font-family: "Oswald", sans-serif;
+  color: #EABDFF;
 }
 
 @media (prefers-reduced-motion: reduce) {

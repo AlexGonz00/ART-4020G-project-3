@@ -11,9 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const tiles = document.querySelector("[data-surface-tiles]");
   const title = document.querySelector(".title-box");
   const gauge = document.querySelector(".measurement-container");
+  const pressure = document.querySelector("[data-pressure]");
+  const endText = document.querySelector(".end-box");
   
   // Initially set gauge transparent
   gsap.set(gauge, { autoAlpha: 0, y: -20} );
+  gsap.set(endText, { autoAlpha: 0, y: -20} );
 
   const MAX_DEPTH = 10935; // Furthest scroll level, reflecting the Challenger Deep's level
   const SCROLL_SPEED = 10;  // One screen of scrolling = 5m
@@ -21,8 +24,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Background stuff
   const DARK_DEPTH = 1000;
-  const SURFACE_COLOR = "#13B9E8";
-  const ABYSS_COLOR = "rgb(0, 0, 0)";
+  const END_TEXT_FADE = 150;
+
+  // Stuff for pressure calculation
+  const SEAWATER_DENSITY = 1023.6;
+  const GRAVITY = 9.80665;
   
   // Gradient images for depth indications
   const zones = [
@@ -70,6 +76,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         readout.textContent = Math.round(depth).toLocaleString() + "m";
 
+        // Report current pressure (in PSI)
+        const bar = (SEAWATER_DENSITY * GRAVITY * depth) / 100000;
+        pressure.textContent = bar.toLocaleString(undefined, { maximumFractionDigits: 3 }) + " bar";
+
         if (caption.textContent !== zone.name)
           caption.textContent = zone.name;
       }
@@ -78,6 +88,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   tl.to(title, { autoAlpha: 0, y: -30, duration: INTRO_FADE, ease: "power1.in" }, 0);
   tl.to(gauge, { autoAlpha: 1, y: 0, duration: INTRO_FADE, ease: "power1.out"}, 0);
+
+  tl.to(
+  endText,
+  { autoAlpha: 1, y: 0, duration: END_TEXT_FADE, ease: "power1.out" },
+  MAX_DEPTH - END_TEXT_FADE
+);
 
   gsap.set(layers, { scale: 0 });
 
@@ -124,20 +140,37 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   const entityEls = entities.map((e) => {
+    // create wrapper for image
+    const wrap = document.createElement("div");
+    wrap.className = "entity";
+    wrap.style.width = `${e.width ?? 30}vmin`;
+    
     const img = document.createElement("img");
-    img.className = "entity";
     img.src = e.src;
     img.alt = "";
-    img.style.width = `${e.width ?? 30}vmin`;
-    entityHost.appendChild(img);
-    return img;
+    wrap.appendChild(img);
+    
+    // Check if entity has a name, create label
+    if (e.name) {
+      const label = document.createElement("span");
+      label.className = "entity-label";
+      label.textContent = e.name;
+      wrap.appendChild(label);
+      gsap.set(label, { xPercent: -50, transformOrigin: "50% 100%" });
+    }
+
+    entityHost.appendChild(wrap);
+    
+    return wrap;
   });
 
   // Give entites (if toggled) a wobble effect
   entities.forEach((e, i) => {
-    if (e.wobble === false) return;
+    if (e.wobble === false) return; // skip if wobble is disabled
+
+    const img = entityEls[i].querySelector("img");
     
-    gsap.to(entityEls[i], {
+    gsap.to(img, {
       rotation: gsap.utils.random(-10, 10),
       skewX: gsap.utils.random(-15, 15),
       duration: gsap.utils.random(2, 4),

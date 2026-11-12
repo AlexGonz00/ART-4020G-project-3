@@ -15,6 +15,7 @@
 // endScale: scale multiplier
 const ENTITIES = [
     {
+        name: "KILLER WHALE",
         src: "../assets/img/entities/killer_whale.png",
         depth: 120,
         span: 200,
@@ -38,8 +39,8 @@ const ENTITIES = [
     },
     {
         src: "../assets/img/entities/ocean_floor.png",
-        depth: 10935,
-        span: 400,
+        depth: 10760,
+        span: 350,
         x: 0,
         y: 0,
         offset: 0,
