@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
       scrub: 1,
       onUpdate: (self) => {
         const depth = self.progress * MAX_DEPTH;
-        const zone = zones.findLast((z) => depth <= z.max);
+        const zone = zones.find((z) => depth <= z.max);
 
         readout.textContent = Math.round(depth).toLocaleString() + "m";
 
@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return img;
   });
 
-
+  // Give entites (if toggled) a wobble effect
   entities.forEach((e, i) => {
     if (e.wobble === false) return;
     
@@ -149,7 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
         i * CURRENT_STEP
       );
   });
-
+  
   entities.forEach((e, i) => {
     const el = entityEls[i];
     const start = e.depth - e.span / 2;

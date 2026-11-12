@@ -38,13 +38,13 @@ const ENTITIES = [
     },
     {
         src: "../assets/img/entities/ocean_floor.png",
-        depth: 11035,
-        span: 100,
+        depth: 10935,
+        span: 350,
         x: 0,
         y: 0,
         offset: 0,
-        width: 240,
-        endScale: 2,
+        width: 1080,
+        endScale: 0.4,
         wobble: false,
         hold: true
     }
